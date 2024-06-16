@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #131312, #af4261);
+}
+h2{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    transition:  0.3s ;
+
+}
+h2:hover
+{
+        transform: scale(1.2);
+}
+
+.calculator {
+    background: #fcf7f7;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(248, 245, 245, 0.2);
+    width: 360px;
+    overflow: hidden;
+}
+
+.display {
+    background: #222;
+    color: #ffffff;
+    font-size: 2.5em;
+    padding: 30px;
+    text-align: right;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 15px;
+    box-shadow: inset 0 -5px 10px rgba(192, 165, 165, 0.014);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background: #e0e0e0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.btn {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+}
+
+.btn:active {
+    background: #d4d4d4;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+
+.btn[data-value="/"],
+.btn[data-value="*"],
+.btn[data-value="-"],
+.btn[data-value="+"] {
+    background: #ff9500;
+    color: white;
+    box-shadow: 5px 5px 10px #918c84, -5px -5px 10px #ffaf00;
+}
+
+.btn[data-value="/"]:hover,
+.btn[data-value="*"]:hover,
+.btn[data-value="-"]:hover,
+.btn[data-value="+"]:hover {
+    background: #ae7211;
+}
+
+#equals {
+    background: #5c2c3549;
+    color: white;
+    grid-column: span 3;
+    box-shadow: 5px 5px 10px #d92344, -5px -5px 10px #ff4766;
+}
+
+#equals:hover {
+    background: #1d0e11;
+}
+
+.btn[data-value="AC"],
+.btn[data-value="C"] {
+    background: #ff3b30;
+    color: white;
+    box-shadow: 5px 5px 10px #d32e27, -5px -5px 10px #ff4e3a;
+}
+
+.btn[data-value="AC"]:hover,
+.btn[data-value="C"]:hover {
+    background: #641914;
+}
